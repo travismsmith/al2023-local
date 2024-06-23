@@ -1,5 +1,7 @@
 # Amazon Linux 2023 Local
 
+[![.github/workflows/build.yaml](https://github.com/travismsmith/al2023-local/actions/workflows/build.yaml/badge.svg)](https://github.com/travismsmith/al2023-local/actions/workflows/build.yaml)
+
 ## Description
 
 Script for downloading the latest Amazon Linux 2023 image and converting
