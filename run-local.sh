@@ -22,6 +22,10 @@ if [ "$(uname)" == "Darwin" ]; then
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   sha256sum -c SHA256SUMS
 fi
+if [ $? -ne 0 ]; then
+  echo "The image is corrupted, please delete it and try again"
+  exit 1
+fi
 
 echo "Converting the image to VMDK format"
 qemu-img convert -f qcow2 -O vmdk $file output/"${file%.qcow2}.vmdk"
