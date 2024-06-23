@@ -1,0 +1,11 @@
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Download and convert Amazon Linux 2023 Image
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Execute the run-docker script
+        run: ./run-docker.sh
