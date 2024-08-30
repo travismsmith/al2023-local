@@ -1,0 +1,13 @@
+#cloud-config
+# vim:syntax=yaml
+packages:
+  - open-vm-tools
+users:
+  - default
+  - name: tmsmith
+    groups: sudo
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    plain_text_passwd: Password
+    lock_passwd: false
+    ssh-authorized-keys:
+      - ssh-rsa <ssh key>
